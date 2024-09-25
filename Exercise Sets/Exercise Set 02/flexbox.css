@@ -1,27 +1,8 @@
-
 :root {
     --clr-dark: #212121;
     --clr-box: #535353;
     --clr-text: white;
     --clr-green: #1db954;
-}
-
-.poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-  
-.poppins-medium {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-}
-  
-.poppins-bold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
 }
 
 body {
@@ -30,72 +11,63 @@ body {
     line-height: 1.6;
     word-spacing: 1.4px;
     background-color: var(--clr-dark);
-    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-
 .container {
     width: 80%;
-    height: 700px;
-    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    justify-content: center;  
-    align-items: center;      
-    height: 100vh; 
-    gap: 20px;  
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-.item{
+.item {
     width: 400px;
     height: 600px;
     background-color: var(--clr-box);
     color: var(--clr-text);
-    font-family: "Poppins", sans-serif; 
     padding: 1em;
-    font-weight: 700;
     border-radius: 20px;
-    align-items: flex-start; 
-    position: relative; 
+    position: relative;
 }
 
 h2, p {
     text-align: left;
     padding-left: 20px;
     color: var(--clr-text);
-    font-family: "Poppins", sans-serif;    
+    font-family: "Poppins", sans-serif;
 }
 
 h2 {
-    font-weight: 500; 
+    font-weight: 500;
 }
 
 p {
     font-weight: 400;
-    font-size: 1.1rem;  
-    line-height: 1.6; 
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 span {
     color: var(--clr-green);
 }
 
-.profile-pic {
-    width: 400px;             
+.flexbox-pic {
+    width: 400px;
     height: 380px;
-    border-radius: 10px;        
-    object-fit: cover;        
-    margin-bottom: 10px;      
-    align-self: center; 
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    align-self: center;
 }
 
 .icon {
-    color: var(--clr-green); 
-    font-size: 50px; 
-    float: right; 
-    margin-left: 10px; 
+    color: var(--clr-green);
+    font-size: 50px;
+    float: right;
+    margin-left: 10px;
 }
