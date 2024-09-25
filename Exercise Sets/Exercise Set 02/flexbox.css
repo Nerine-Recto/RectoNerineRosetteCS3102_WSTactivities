@@ -52,10 +52,6 @@ p {
     line-height: 1.6;
 }
 
-span {
-    color: var(--clr-green);
-}
-
 .flexbox-pic {
     width: 400px;
     height: 380px;
