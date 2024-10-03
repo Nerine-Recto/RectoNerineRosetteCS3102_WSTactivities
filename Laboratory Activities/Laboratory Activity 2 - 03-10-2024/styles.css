@@ -1,0 +1,312 @@
+/* Define custom properties for colors */
+:root{
+    --clr-text: white;
+    --clr-quartz: #b4c8ea;
+    --clr-serenity: #f7cac9;
+    --clr-quartz-box: #91a8d0;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--clr-text);
+    background-color: var(--clr-quartz);
+}
+
+/* Styling for the main heading */
+h1 {
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Styling for secondary headings */
+h2 {
+    text-align: center;
+    font-size: 25px;
+    margin: 50px 0 20px;
+}
+
+/* Container for the vision board */
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 70vh;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 1200px;
+}
+
+/* Styling for rows */
+.row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Basic styling for columns */
+.col {
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    background-color: var(--clr-quartz-box);
+}
+
+/* Height settings for rows */
+.row-1 {
+    height: calc(70% - 5px);
+}
+
+.row-2 {
+    height: calc(30% - 5px);
+}
+
+/* Background images for specific columns */
+.col-1-1 {
+    background-image: url('assets/carat_bong.jpg');
+}
+
+.col-1-2{
+    background-color: var(--clr-quartz-box);
+    display: flex;
+    overflow: hidden; 
+}
+
+.col-1-2, .col-1-4 {
+    flex-direction: column;
+}
+
+.col-1-4 {
+    background-color: transparent;
+}
+
+.col-1-3 {
+    background-image: url('assets/17.jpg');
+}
+
+.col-1-4-1 {
+    height: calc(66.67% - 5px);
+    background-image: url('assets/tissue_club1.jpg');
+}
+
+.col-1-4-2 {
+    height: calc(33.33% - 5px);
+    margin: 10px 0;
+    background-image: url('assets/cheol2.jpg');
+}
+
+.col-2-1 {
+    width: calc(50% - 5px);
+    background-image: url('assets/cty.png');
+    order: 2;
+}
+
+.col-2-2 {
+    background-image: url('assets/kape.png');
+    order: 3;
+}
+
+.col-2-3 {
+    background-image: url('assets/sea.png');
+    order: 1;
+}
+
+/* Width settings for columns */
+.col-1-1, .col-1-2, .col-1-3, .col-1-4, .col-2-2, .col-2-3 {
+    width: calc(25% - 7.5px);
+}
+
+/* Margin settings for columns */
+.col-1-1, .col-1-2, .col-1-3, .col-2-1, .col-2-3 {
+    margin-right: 10px;
+}
+
+/* Background settings for image columns */
+.col-1-1, .col-1-3, .col-1-4-1, .col-1-4-2, .col-2-1, .col-2-2, .col-2-3 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Styling for ordered list */
+ol {
+    list-style-type: none; 
+    font-size: 20px;
+    align-items: center; 
+    overflow-y: auto;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+/* Styling for Font Awesome icons */
+.fas {
+    margin-right: 8px;
+    font-size: 22px; 
+}
+
+/* Positioning for hover effect */
+.col-1-1, .col-1-3, .col-1-4-2 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect styling */
+.col-1-1::after, .col-1-3::after, .col-1-4-2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(180, 200, 234, 0.9);
+    color: var(--clr-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Show hover effect on hover */
+.col-1-1:hover::after, .col-1-3:hover::after, .col-1-4-2:hover::after {
+    opacity: 1;
+}
+
+/* Specific hover text for each column */
+.col-1-1:hover::after {
+    content: "Sa ngalan ni BOO SEUNGKWAN, I will see SVT in January!";
+}
+
+.col-1-3:hover::after {
+    content: "Say the name?";
+}
+
+.col-1-4-2:hover::after {
+    content: "Go get that degree!";
+}
+
+/* Media Queries for Responsiveness */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    ol {
+        font-size: 20px;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .container {
+        width: 95%;
+        height: auto;
+    }
+
+    .row {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .col-1-1, .col-1-2, .col-1-3, .col-1-4, .col-2-1, .col-2-2, .col-2-3 {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        height: 200px;
+    }
+
+    .col-1-4 {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+    }
+
+    .col-1-4-1, .col-1-4-2 {
+        width: calc(50% - 5px);
+        height: 200px;
+    }
+
+    .col-1-4-1 {
+        margin-right: 10px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin: 30px 0 15px;
+    }
+
+    ol {
+        font-size: 18px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    ol {
+        font-size: 16px;
+    }
+
+    .col-1-1, .col-1-2, .col-1-3, .col-1-4, .col-2-1, .col-2-2, .col-2-3, .col-1-4-1, .col-1-4-2 {
+        height: 150px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .container {
+        width: 100%;
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin: 20px 0 10px;
+    }
+
+    ol {
+        font-size: 14px;
+    }
+
+    .col-1-1, .col-1-2, .col-1-3, .col-1-4, .col-2-1, .col-2-2, .col-2-3, .col-1-4-1, .col-1-4-2 {
+        height: 120px;
+    }
+
+    .col-1-1::after, .col-1-3::after, .col-1-4-2::after {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
